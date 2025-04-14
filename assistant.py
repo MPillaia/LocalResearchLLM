@@ -73,7 +73,7 @@ def load_references(reference_folder):
 # -------------------------------
 # 2. Building and Saving/Loading the FAISS Index for References
 # -------------------------------
-def build_faiss_index(chunks, embed_model_name="all-MiniLM-L6-v2"):
+def build_faiss_index(chunks, embed_model_name="gpt2"):
     """
     Creates embeddings for each chunk and builds a FAISS index.
     Returns the index, the embedding model, and the raw embeddings.
@@ -261,7 +261,7 @@ def main():
                         help="File path for saving/loading the FAISS index for references.")
     parser.add_argument("--rag_chunks_file", type=str, default="rag_chunks.pkl",
                         help="File path for saving/loading the reference chunks.")
-    parser.add_argument("--embed_model_name", type=str, default="all-MiniLM-L6-v2",
+    parser.add_argument("--embed_model_name", type=str, default="gpt2",
                         help="Name of the embedding model to use for references.")
     parser.add_argument("--load_model_path", type=str,
                         help="Path to load a fine tuned adapter from.")
