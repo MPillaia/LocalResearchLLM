@@ -1,0 +1,8 @@
+torch
+numpy
+faiss-cpu
+faiss-gpu
+pdfminer.six
+sentence-transformers
+transformers
+peft
